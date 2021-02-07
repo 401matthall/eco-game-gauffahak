@@ -111,7 +111,7 @@ namespace Eco.Mods.TechTree
                 )
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
-            this.CraftMinutes = CreateCraftTimeValue(0.5f);
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
             this.Initialize(Localizer.DoStr("Gold ore"), typeof(AlchemyGoldOreRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
@@ -132,7 +132,7 @@ namespace Eco.Mods.TechTree
                 )
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
-            this.CraftMinutes = CreateCraftTimeValue(0.5f);
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
             this.Initialize(Localizer.DoStr("Iron ore"), typeof(AlchemyIronOreRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
@@ -153,11 +153,33 @@ namespace Eco.Mods.TechTree
                 )
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
-            this.CraftMinutes = CreateCraftTimeValue(0.5f);
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
             this.Initialize(Localizer.DoStr("Copper ore"), typeof(AlchemyCopperOreRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
     }
+
+    public partial class AlchemyOakLogRecipe : RecipeFamily
+    {
+        public AlchemyOakLogRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Oak log",Localizer.DoStr("Oak log"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<OakLogItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Oak log"), typeof(AlchemyOakLogRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
 
     public partial class AlchemyCoalRecipe : RecipeFamily
     {
@@ -174,7 +196,7 @@ namespace Eco.Mods.TechTree
                 )
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
-            this.CraftMinutes = CreateCraftTimeValue(0.5f);
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
             this.Initialize(Localizer.DoStr("Coal"), typeof(AlchemyCoalRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
@@ -196,7 +218,7 @@ namespace Eco.Mods.TechTree
                 )
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
-            this.CraftMinutes = CreateCraftTimeValue(0.5f);
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
             this.Initialize(Localizer.DoStr("Anti-tailings"), typeof(AlchemyAntiTalingsRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
