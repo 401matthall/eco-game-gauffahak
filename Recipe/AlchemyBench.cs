@@ -159,6 +159,132 @@ namespace Eco.Mods.TechTree
         }
     }
 
+    public partial class AlchemySandstoneRecipe : RecipeFamily
+    {
+        public AlchemySandstoneRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Sandstone",Localizer.DoStr("Sandstone"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<SandstoneItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Sandstone"), typeof(AlchemySandstoneRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
+    public partial class AlchemyShaleRecipe : RecipeFamily
+    {
+        public AlchemyShaleRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Shale",Localizer.DoStr("Shale"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<ShaleItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Shale"), typeof(AlchemyShaleRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
+    public partial class AlchemyLimestoneRecipe : RecipeFamily
+    {
+        public AlchemyLimestoneRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Limestone",Localizer.DoStr("Limestone"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<LimestoneItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Limestone"), typeof(AlchemyLimestoneRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
+    public partial class AlchemyGraniteRecipe : RecipeFamily
+    {
+        public AlchemyGraniteRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Granite",Localizer.DoStr("Granite"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<GraniteItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Granite"), typeof(AlchemyGraniteRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
+    public partial class AlchemyGneissRecipe : RecipeFamily
+    {
+        public AlchemyGneissRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Gneiss",Localizer.DoStr("Gneiss"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<GneissItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Gneiss"), typeof(AlchemyGneissRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
+    public partial class AlchemyBasaltRecipe : RecipeFamily
+    {
+        public AlchemyBasaltRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Basalt",Localizer.DoStr("Basalt"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<BasaltItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Basalt"), typeof(AlchemyBasaltRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
     public partial class AlchemyOakLogRecipe : RecipeFamily
     {
         public AlchemyOakLogRecipe()
