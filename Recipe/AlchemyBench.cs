@@ -74,7 +74,6 @@ namespace Eco.Mods.TechTree
 
     }
 
-    [RequiresSkill(typeof(IndustrySkill), 1)]
     public partial class AlchemyBenchRecipe : RecipeFamily
     {
         public AlchemyBenchRecipe()
