@@ -38,6 +38,8 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequireComponent(typeof(PropertyAuthComponent))]
+    [RequireComponent(typeof(LinkComponent))]
+    [RequireComponent(typeof(CraftingComponent))]
     [RequireComponent(typeof(SolidGroundComponent))]
     public partial class AlchemyBenchObject : WorldObject, IRepresentsItem
     {
