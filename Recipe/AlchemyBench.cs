@@ -285,6 +285,27 @@ namespace Eco.Mods.TechTree
         }
     }
 
+    public partial class AlchemyClayRecipe : RecipeFamily
+    {
+        public AlchemyClayRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Clay",Localizer.DoStr("Clay"),
+                    new IngredientElement[] {},
+                    new CraftingElement[]
+                    {
+                        new CraftingElement<ClayItem>(1),  
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Clay"), typeof(AlchemyClayRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
     public partial class AlchemyOakLogRecipe : RecipeFamily
     {
         public AlchemyOakLogRecipe()
