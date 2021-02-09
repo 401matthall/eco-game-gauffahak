@@ -349,13 +349,35 @@ namespace Eco.Mods.TechTree
         }
     }
 
+    public partial class AlchemyAntiWetTailingsRecipe : RecipeFamily
+    {
+        public AlchemyAntiWetTailingsRecipe()
+        {
+            this.Recipes = new List<Recipe>
+            {
+                new Recipe("Purify Wet Tailings",Localizer.DoStr("Purify Wet Tailings"),
+                    new IngredientElement[] {
+                       new IngredientElement(typeof(WetTailingsItem), 10),
+                    },
+                    new CraftingElement[] {
+                        new CraftingElement<SandItem>(1),
+                    }
+                )
+            };
+            this.LaborInCalories = CreateLaborInCaloriesValue(0); 
+            this.CraftMinutes = CreateCraftTimeValue(0.025f);
+            this.Initialize(Localizer.DoStr("Purify Wet Tailings"), typeof(AlchemyAntiWetTailingsRecipe));
+            CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
+        }
+    }
+
     public partial class AlchemyAntiTalingsRecipe : RecipeFamily
     {
         public AlchemyAntiTalingsRecipe()
         {
             this.Recipes = new List<Recipe>
             {
-                new Recipe("Anti-tailings",Localizer.DoStr("Anti-tailings"),
+                new Recipe("Purify Tailings",Localizer.DoStr("Purify Tailings"),
                     new IngredientElement[] {
                        new IngredientElement(typeof(TailingsItem), 10),
                     },
@@ -366,7 +388,7 @@ namespace Eco.Mods.TechTree
             };
             this.LaborInCalories = CreateLaborInCaloriesValue(0); 
             this.CraftMinutes = CreateCraftTimeValue(0.025f);
-            this.Initialize(Localizer.DoStr("Anti-tailings"), typeof(AlchemyAntiTalingsRecipe));
+            this.Initialize(Localizer.DoStr("Purify Tailings"), typeof(AlchemyAntiTalingsRecipe));
             CraftingComponent.AddRecipe(typeof(AlchemyBenchObject), this);
         }
     }
